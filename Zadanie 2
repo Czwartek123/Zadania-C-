@@ -1,12 +1,16 @@
-class Program 23
+using System;
+class Program 
+	
+
 {
     static void Main()
     {
-        int[] array = { 1, 2 ,3 5,  6, 10 ,200 , 400 ,4000};
-        int  znajdzElement
+	//Tworzenie listy elementów
+        int[] array = { 1, 2 ,3, 5,  6, 10 ,200 , 400 ,4000};
+        int  znajdzElement = 200 ;
 
-        int index = szukajKota(array, znajdzElement);
-	
+        int index = szukajKota (array, znajdzElement);
+	//Petla if
         if (index != -1)
         {
             Console.WriteLine($"Pierwsze wystąpienie liczby wynosi {znajdzElement} w liście: {index}");
@@ -16,8 +20,8 @@ class Program 23
             Console.WriteLine($"Liczba {znajdzElement} nie znajduję się w liście.");
         }
     }
-
-     static int szukajKota(ArrayList list, int target)
+	//Funckja zwracajaca (target)
+     static int szukajKota (ArrayList list, int target)
     {
         return list.IndexOf(target);
     }
