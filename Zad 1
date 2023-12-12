@@ -5,11 +5,13 @@ class Program
 {
     static void Main()
     {
-        int[] array = { 1, 2 ,3 5,  6, 10 ,200 , 400 ,4000};
-        int  znajdzElement
+		//Tworzenie tablicy elemetnów
+        int[] array = { 1, 2 ,3,  5,  6, 10 ,200 , 400 ,4000};
+        int znajdzElement = 400;
 
-        int index = szukajKota(array, znajdzElement);
+        int index = szukajKota(array , znajdzElement);
 	
+		//Petla if
         if (index != -1)
         {
             Console.WriteLine($"Pierwsze wystąpienie liczby wynosi {znajdzElement} w tablicy: {index}");
@@ -19,7 +21,7 @@ class Program
             Console.WriteLine($"Liczba {znajdzElement} nie znajduję się w tablicy.");
         }
     }
-
+	//Funkcja szukania elementu
     static int szukajKota(int[] array, int target)
     {
         for (int i = 0; i < array.Length; i++)
