@@ -1,0 +1,24 @@
+class Program 23
+{
+    static void Main()
+    {
+        int[] array = { 1, 2 ,3 5,  6, 10 ,200 , 400 ,4000};
+        int  znajdzElement
+
+        int index = szukajKota(array, znajdzElement);
+	
+        if (index != -1)
+        {
+            Console.WriteLine($"Pierwsze wystąpienie liczby wynosi {znajdzElement} w liście: {index}");
+        }
+        else
+        {
+            Console.WriteLine($"Liczba {znajdzElement} nie znajduję się w liście.");
+        }
+    }
+
+     static int szukajKota(ArrayList list, int target)
+    {
+        return list.IndexOf(target);
+    }
+}
