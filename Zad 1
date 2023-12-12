@@ -1,0 +1,34 @@
+//ZADANIE 1
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] array = { 1, 2 ,3 5,  6, 10 ,200 , 400 ,4000};
+        int  znajdzElement
+
+        int index = szukajKota(array, znajdzElement);
+	
+        if (index != -1)
+        {
+            Console.WriteLine($"Pierwsze wystąpienie liczby wynosi {znajdzElement} w tablicy: {index}");
+        }
+        else
+        {
+            Console.WriteLine($"Liczba {znajdzElement} nie znajduję się w tablicy.");
+        }
+    }
+
+    static int szukajKota(int[] array, int target)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == target)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
