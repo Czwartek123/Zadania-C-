@@ -1,28 +1,28 @@
-using System;
-class Program 
-	
 
+using System;
+using System.Collections;
+
+class Program
 {
     static void Main()
     {
-	//Tworzenie listy elementów
-        int[] array = { 1, 2 ,3, 5,  6, 10 ,200 , 400 ,4000};
-        int  znajdzElement = 200 ;
+	//Tworzenie listy
+        ArrayList listaElementow = new ArrayList() { 1, 2 ,3,  5,  6, 10 ,200 , 400 ,4000 };
+        int znajdzElement = 4000;
 
-        int index = szukajKota (array, znajdzElement);
+        int index = szukajKota (listaElementow, znajdzElement);
 	//Petla if
         if (index != -1)
         {
-            Console.WriteLine($"Pierwsze wystąpienie liczby wynosi {znajdzElement} w liście: {index}");
+            Console.WriteLine($"Pierwsze wystąpienie liczby {znajdzElement} w liści wynosi: {index}");
         }
         else
         {
-            Console.WriteLine($"Liczba {znajdzElement} nie znajduję się w liście.");
+            Console.WriteLine($"Liczba {znajdzElement} nie znajduje sie w liście.");
         }
     }
-	//Funckja zwracajaca (target)
-     static int szukajKota (ArrayList list, int target)
+//Funckja zwracająca 'cel'
+    static int szukajKota(ArrayList list, int cel)
     {
-        return list.IndexOf(target);
-    }
-}
+        return list.IndexOf(cel);
+    }}
